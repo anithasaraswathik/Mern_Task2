@@ -1,0 +1,220 @@
+/* Overall Form Container */
+.login-wrapper {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Header Text Matching Reference Image */
+.login-page-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  color: #bfe0e5;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  text-align: center;
+  user-select: none;
+}
+
+/* Dark Charcoal Card */
+.login-card {
+  width: 100%;
+  background-color: #0d2226;
+  border-radius: 2px;
+  padding: 34px 28px 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Row: Combined icon block and text input */
+.input-field-row {
+  display: flex;
+  align-items: stretch;
+  background-color: #d1d4d5;
+  margin-bottom: 16px;
+  height: 46px;
+  border-radius: 1px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.input-field-row:focus-within {
+  border-color: #55919c;
+}
+
+/* Left Icon Box with lighter grey background */
+.input-icon-box {
+  width: 46px;
+  background-color: #c4c7c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-right: 1px solid #bcbfc0;
+}
+
+.field-icon {
+  width: 17px;
+  height: 17px;
+  fill: #4e5356;
+}
+
+/* Right Text Input */
+.text-input {
+  flex: 1;
+  background-color: #d1d4d5;
+  border: none;
+  outline: none;
+  padding: 0 14px;
+  font-size: 14.5px;
+  font-family: inherit;
+  color: #24292b;
+}
+
+.text-input::placeholder {
+  color: #767b7d;
+  font-size: 14px;
+}
+
+/* Prevent Chrome autofill from yellowing or turning blue */
+.text-input:-webkit-autofill,
+.text-input:-webkit-autofill:hover, 
+.text-input:-webkit-autofill:focus, 
+.text-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #d1d4d5 inset !important;
+  -webkit-text-fill-color: #24292b !important;
+}
+
+/* Options Row: Remember Me & Forgot Password */
+.login-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 24px;
+  font-size: 12.5px;
+}
+
+/* Remember Me Checkbox */
+.remember-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  color: #8da4a8;
+  user-select: none;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.custom-checkbox-box {
+  width: 13px;
+  height: 13px;
+  background-color: #0b1a1d;
+  border: 1px solid #3d575c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1px;
+}
+
+.custom-checkbox-box.checked {
+  background-color: #0b1a1d;
+  border-color: #55777d;
+}
+
+.custom-checkbox-box svg {
+  width: 10px;
+  height: 10px;
+  stroke: #ffffff;
+}
+
+.remember-text {
+  font-size: 12.5px;
+  color: #8da4a8;
+  letter-spacing: 0.2px;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  color: #8da4a8;
+  font-style: italic;
+  font-size: 12.5px;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  transition: color 0.15s ease;
+}
+
+.forgot-password-link:hover {
+  color: #bfe0e5;
+  text-decoration: underline;
+}
+
+/* Action Button */
+.login-submit-btn {
+  width: 100%;
+  height: 46px;
+  background-color: #487e88;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.login-submit-btn:hover:not(:disabled) {
+  background-color: #528e99;
+}
+
+.login-submit-btn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.login-submit-btn:disabled {
+  background-color: #3b636a;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Status Notifications */
+.alert {
+  padding: 10px 12px;
+  border-radius: 2px;
+  font-size: 12.5px;
+  margin-bottom: 16px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.alert-error {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: #ff9ca4;
+  border: 1px solid rgba(220, 53, 69, 0.4);
+}
+
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.22);
+  color: #84e8a4;
+  border: 1px solid rgba(40, 167, 69, 0.45);
+}
